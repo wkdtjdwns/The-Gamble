@@ -154,8 +154,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 167475409}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.56333333}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -279,7 +279,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 47635014}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 155379636}
+        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
+        m_MethodName: ExitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &47635014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -607,6 +619,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 155379635}
+  - component: {fileID: 155379636}
   m_Layer: 0
   m_Name: ButtonManager
   m_TagString: Untagged
@@ -629,6 +642,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &155379636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155379634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d53f068d02c89f4abc57045d1b3679b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lobby: {fileID: 517049312}
+  select: {fileID: 488443749}
+  tutorial: {fileID: 482647505}
+  tutorialPages:
+  - {fileID: 2028336752}
+  - {fileID: 565458694}
+  - {fileID: 1570625239}
+  tutorialPage: 0
 --- !u!1 &156252179
 GameObject:
   m_ObjectHideFlags: 0
@@ -675,7 +708,7 @@ GameObject:
   m_Component:
   - component: {fileID: 162756737}
   m_Layer: 5
-  m_Name: Page 1 Tutiral Text Box
+  m_Name: Page 1 Tutorial Text Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1090,7 +1123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1164,7 +1197,7 @@ GameObject:
   - component: {fileID: 336461738}
   - component: {fileID: 336461737}
   m_Layer: 5
-  m_Name: Page 3 Tutiral Text
+  m_Name: Page 3 Tutorial Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1649,7 +1682,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 483228064}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 155379636}
+        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
+        m_MethodName: NextTutorial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &483228064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1705,7 +1750,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &488443750
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1861,7 +1906,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &517049313
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2262,7 +2307,7 @@ GameObject:
   m_Component:
   - component: {fileID: 565458695}
   m_Layer: 5
-  m_Name: Page 2
+  m_Name: Tutorial Page 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2422,7 +2467,7 @@ GameObject:
   - component: {fileID: 647428615}
   - component: {fileID: 647428614}
   m_Layer: 5
-  m_Name: Page 2 Tutiral Text
+  m_Name: Page 2 Tutorial Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2863,7 +2908,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.2694857, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3291,7 +3336,7 @@ GameObject:
   - component: {fileID: 811843569}
   - component: {fileID: 811843568}
   m_Layer: 5
-  m_Name: Page 1 Tutiral Text
+  m_Name: Page 1 Tutorial Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3684,9 +3729,9 @@ RectTransform:
   - {fileID: 320634525}
   - {fileID: 517049313}
   - {fileID: 488443750}
-  - {fileID: 1126670587}
   - {fileID: 482647506}
   - {fileID: 1780653959}
+  - {fileID: 1356518723}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4389,12 +4434,12 @@ GameObject:
   - component: {fileID: 1126670589}
   - component: {fileID: 1126670588}
   m_Layer: 5
-  m_Name: Option Panel
+  m_Name: Option
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1126670587
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4402,7 +4447,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1126670586}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4410,7 +4455,7 @@ RectTransform:
   - {fileID: 205536959}
   - {fileID: 268896640}
   - {fileID: 1846820035}
-  m_Father: {fileID: 888841043}
+  m_Father: {fileID: 1757385409}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -4537,7 +4582,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1147438015}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 155379636}
+        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
+        m_MethodName: OnTutorial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1147438015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4732,9 +4789,9 @@ RectTransform:
   m_Father: {fileID: 463935079}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -17, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1159987037
 MonoBehaviour:
@@ -5106,7 +5163,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1315074650}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 155379636}
+        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
+        m_MethodName: PrevTutorial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1315074650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5257,11 +5326,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 555413839}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 360, y: 404}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -45, y: -45}
+  m_SizeDelta: {x: 75, y: 75}
+  m_Pivot: {x: 1, y: 1}
 --- !u!114 &1328439726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5305,7 +5374,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1328439727}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 155379636}
+        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
+        m_MethodName: OffTutorial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1328439727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5423,6 +5504,72 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1347414521}
   m_CullTransparentMesh: 1
+--- !u!1 &1356518722
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1356518723}
+  - component: {fileID: 1356518725}
+  - component: {fileID: 1356518724}
+  m_Layer: 5
+  m_Name: Option
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1356518723
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356518722}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1757385409}
+  m_Father: {fileID: 888841043}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1356518724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356518722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89f3a9d1af9d2454db8170cadcba0847, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1356518725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356518722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b53ed624fefb5464e8c74833baec41fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  option: {fileID: 1757385408}
+  bgmSlider: {fileID: 519255710}
+  sfxSlider: {fileID: 104935620}
+  isOption: 0
 --- !u!1 &1364700482
 GameObject:
   m_ObjectHideFlags: 0
@@ -5584,7 +5731,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1366068753}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 155379636}
+        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
+        m_MethodName: OnSelect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1366068753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5824,7 +5983,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1570625240}
   m_Layer: 5
-  m_Name: Page 3
+  m_Name: Tutorial Page 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5987,7 +6146,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1647016011}
   m_Layer: 5
-  m_Name: Page 2 Tutiral Text Box
+  m_Name: Page 2 Tutorial Text Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6171,6 +6330,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1739418533}
   m_CullTransparentMesh: 1
+--- !u!1 &1757385408
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1757385409}
+  - component: {fileID: 1757385411}
+  - component: {fileID: 1757385410}
+  m_Layer: 5
+  m_Name: Option Panel
+  m_TagString: Option
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1757385409
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757385408}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1126670587}
+  m_Father: {fileID: 1356518723}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1757385410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757385408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.78431374}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1757385411
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757385408}
+  m_CullTransparentMesh: 1
 --- !u!1 &1774996475
 GameObject:
   m_ObjectHideFlags: 0
@@ -6331,7 +6566,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1780653961}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1356518725}
+        m_TargetAssemblyTypeName: Option, Assembly-CSharp
+        m_MethodName: OnOffOption
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1780653961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6610,7 +6857,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1846820037}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1356518725}
+        m_TargetAssemblyTypeName: Option, Assembly-CSharp
+        m_MethodName: OnOffOption
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1846820037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6780,7 +7039,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2009491428}
   m_Layer: 5
-  m_Name: Page 3 Tutiral Text Box
+  m_Name: Page 3 Tutorial Text Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6937,7 +7196,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2028336753}
   m_Layer: 5
-  m_Name: Page 1
+  m_Name: Tutorial Page 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
